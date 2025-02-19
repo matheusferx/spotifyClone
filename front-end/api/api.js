@@ -1,9 +1,21 @@
 import axios from "axios";
 
-const URL = "http://localhost:3001";
+const URL = process.env.REACT_APP_API_URL;
 
-const responseArtist = await axios.get(`${URL}/artists`);
-const responseSongs = await axios.get(`${URL}/songs`);
+export const fetchData = async () => {
+  try {
+    const responseArtist = await axios.get(`${URL}api/artists`);
+    const responseSongs = await axios.get(`${URL}api/songs`);
 
-export const artistArray = responseArtist.data;
-export const songsArray = responseSongs.data;
+    return {
+      artistArray: responseArtist.data,
+      songsArray: responseSongs.data,
+    };
+  } catch (error) {
+    console.error("Erro ao buscar dados:", error);
+    return {
+      artistArray: [],
+      songsArray: [],
+    };
+  }
+};
