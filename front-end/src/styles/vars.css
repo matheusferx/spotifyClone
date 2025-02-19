@@ -1,0 +1,33 @@
+:root {
+  --_shade: hsl(0deg 0% 0% / 25%);
+
+  --_progress: 0;
+
+  --transition-duration: 200ms;
+  --transition-function: ease;
+  
+  --border-radius-s: 5px;
+  --border-radius-m: 10px;
+  --border-radius-l: 15px;
+
+  /* Colors */
+  --text-base-dark: #000;
+  --text-base-light: #fff;
+  --text-sub: #a7a7a7;
+  
+  --bg-icon: #131313;
+  --bg-top-bar: #61616142;
+  --bg-icon-green: rgb(32, 223, 99);
+  --grid-gap: 24px;
+  --column-count: 5;
+
+  /* Fonts */
+  --font-dm-sans: "DM Sans", sans-serif;
+}
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1274px) {
+}
