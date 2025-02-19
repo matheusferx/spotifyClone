@@ -8,6 +8,8 @@ const ItemList = ({title, items, itemsArray, path, idPath}) => {
   const isHome = pathname === '/';
   const finalItems = isHome ? items : Infinity;
 
+  const validItemsArray = Array.isArray(itemsArray) ? itemsArray : [];
+
   return (
     <div className="item-list">
         <div className="item-list__header">
@@ -20,7 +22,7 @@ const ItemList = ({title, items, itemsArray, path, idPath}) => {
               
         <div className="item-list__container">
             
-            {itemsArray.filter((currentValue, index) => index < finalItems).map((currObj, index) => {return <SingleItem idPath={idPath}{...currObj} key={`${title}-${index}`} />})}
+            {validItemsArray.filter((currentValue, index) => index < finalItems).map((currObj, index) => {return <SingleItem idPath={idPath}{...currObj} key={`${title}-${index}`} />})}
         </div>
     </div>
   )
