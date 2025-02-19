@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemList from './IntemList';
 import { fetchData } from '../api/api';
 
